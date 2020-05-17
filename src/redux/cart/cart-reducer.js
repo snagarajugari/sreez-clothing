@@ -3,7 +3,7 @@ import { addItemToCart } from "./cart.util";
 
 const INITIAL_STATE = {
   hidden: true,
-  "cart-items": [],
+  cartItems: [],
 };
 const CartReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
@@ -17,7 +17,7 @@ const CartReducer = (state = INITIAL_STATE, action) => {
     case CartActionTypes.ADD_ITEM:
       return {
         ...state,
-        "cart-items": addItemToCart(state["cart-items"], action.payload),
+        cartItems: addItemToCart(state.cartItems, action.payload),
       };
   }
 };
