@@ -11,6 +11,7 @@ import {
 } from "./components/firebase/firebase.utils";
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.actions";
+import { selectCurrentUser } from "./redux/user/user.selector";
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -48,7 +49,7 @@ class App extends Component {
             exact
             path="/sign-in"
             render={() =>
-              this.props.currentUser ? <Redirect to="/" /> : (<SignInAndSignUp/>)
+              this.props.currentUser ? <Redirect to="/" /> : <SignInAndSignUp />
             }
           />
         </Switch>
@@ -58,8 +59,9 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+  currentUser: selectCurrentUser(state),
 });
+
 const mapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 });
