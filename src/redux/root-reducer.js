@@ -3,10 +3,12 @@ import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import userReducer from "./user/user-reducer";
 import CartReducer from "./cart/cart-reducer";
+import directoryReducer from "./directory/directory.reducer";
 
 const rootReducer = combineReducers({
   user: userReducer,
   cart: CartReducer,
+  directory: directoryReducer,
 });
 
 const persistConfig = {
