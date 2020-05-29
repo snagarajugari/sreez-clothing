@@ -1,5 +1,5 @@
 import React from "react";
-import MenuItem from "../menu-item/menu-item";
+import MenuItem from "../menu-item/menu-item.component";
 import { createStructuredSelector } from "reselect";
 import { selectDirectorySections } from "../../redux/directory/directory.selector";
 import { connect } from "react-redux";
