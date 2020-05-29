@@ -36,12 +36,12 @@ export const CollectionFooterContainer = styled.div`
   font-size: 18px;
 `;
 
-export const NameContainer = styled.div`
+export const NameContainer = styled.span`
   width: 90%;
   margin-bottom: 15px;
 `;
 
-export const PriceContainer = styled.div`
+export const PriceContainer = styled.span`
   width: 10%;
 `;
 
