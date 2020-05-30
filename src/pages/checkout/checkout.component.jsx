@@ -5,7 +5,7 @@ import {
   selectCartTotal,
 } from "../../redux/cart/cart.selectors";
 import { connect } from "react-redux";
-import CheckoutItem from "../../components/checkout-item/checkout-item";
+import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import StripeCheckoutButton from "../../components/stripe-button/stripe-button.component";
 import {
   CheckoutPageContainer,
